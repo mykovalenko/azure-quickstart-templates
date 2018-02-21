@@ -8,6 +8,9 @@
         "omsRegion": {
             "value": "West Europe"
         },
+        "existingStorageAccountSubscriptionId": {
+            "value": "GET-PREREQ-storageaccountSubscriptionId"
+        },
         "existingStorageAccountResourceGroupName": {
             "value": "GET-PREREQ-storageaccountresourcegroupName"
         },
