@@ -97,8 +97,8 @@
               "[parameters('table')]"
             ],
             "storageAccount": {
-              "id": "[resourceId(parameters('existingStorageAccountResourceGroupName'),'Microsoft.Storage/storageaccounts/', parameters('existingStorageAccountName'))]",
-              "key": "[listKeys(resourceId(parameters('existingStorageAccountResourceGroupName'),'Microsoft.Storage/storageAccounts', parameters('existingStorageAccountName')),'2015-06-15').key1]"
+              "id": "[resourceId(concat('/subscriptions/', parameters('existingStorageAccountSubscriptionId'), '/resourceGroups/', parameters('existingStorageAccountResourceGroupName'), '/providers/Microsoft.Storage/storageaccounts/', parameters('existingStorageAccountName')))]",
+              "key": "[listKeys(resourceId(concat('/subscriptions/', parameters('existingStorageAccountSubscriptionId'), '/resourceGroups/', parameters('existingStorageAccountResourceGroupName'), '/providers/Microsoft.Storage/storageaccounts/', parameters('existingStorageAccountName'))),'2015-06-15').key1]"
             }
           }
         }
