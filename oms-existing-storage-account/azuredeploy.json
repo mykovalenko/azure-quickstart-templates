@@ -1,5 +1,5 @@
 {
-  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json",
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
     "omsWorkspaceName": {
@@ -104,8 +104,8 @@
               "[parameters('table')]"
             ],
             "storageAccount": {
-              "id": "[resourceId(concat('/subscriptions/', parameters('existingStorageAccountSubscriptionId'), '/resourceGroups/', parameters('existingStorageAccountResourceGroupName'), '/providers/Microsoft.Storage/storageaccounts/', parameters('existingStorageAccountName')))]",
-              "key": "[listKeys(resourceId(concat('/subscriptions/', parameters('existingStorageAccountSubscriptionId'), '/resourceGroups/', parameters('existingStorageAccountResourceGroupName'), '/providers/Microsoft.Storage/storageaccounts/', parameters('existingStorageAccountName'))),'2015-06-15').key1]"
+              "id": "[concat('/subscriptions/', parameters('existingStorageAccountSubscriptionId'), '/resourceGroups/', parameters('existingStorageAccountResourceGroupName'), '/providers/Microsoft.Storage/storageaccounts/', parameters('existingStorageAccountName'))]",
+              "key": "[listKeys(concat('/subscriptions/', parameters('existingStorageAccountSubscriptionId'), '/resourceGroups/', parameters('existingStorageAccountResourceGroupName'), '/providers/Microsoft.Storage/storageaccounts/', parameters('existingStorageAccountName')),'2015-06-15').key1]"
             }
           }
         }
