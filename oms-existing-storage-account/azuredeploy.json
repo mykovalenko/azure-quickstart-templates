@@ -35,6 +35,13 @@
         "description": "Resource group containing the storage account"
       }
     },
+    "existingStorageAccountSubscriptionId": {
+      "type": "string",
+      "defaultValue": "ffffffff-ffff-ffff-ffff-ffffffffffff",
+      "metadata": {
+        "description": "Subscription Id that owns the storage account"
+      }
+    },
     "table": {
       "type": "string",
       "defaultValue": "WADServiceFabric*EventTable",
